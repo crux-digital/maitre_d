@@ -6,4 +6,4 @@ clean:
 	rm -f ./maitred_*.deb
 
 package:
-	fpm -s dir -t deb -n "maitred" --maintainer 'richard@cruxdigit.al' --vendor 'cruxdigital' -v 0.1.0 -a all -C ./src --prefix / --config-files /etc/maitred.conf --depends git .
+	fpm -s dir -t deb -n "maitred" --maintainer 'richard@cruxdigit.al' --vendor 'cruxdigital' -v 0.2.0 -a all -C ./src --prefix / --config-files /etc/maitred.conf --depends git .

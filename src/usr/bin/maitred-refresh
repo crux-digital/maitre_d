@@ -32,7 +32,8 @@ fi
 
 TMP="/tmp/maitred"
 mkdir -p $TMP
-REPO_TMP="${TMP}/repo"
+CLONE_DIR="$(echo ${REPO} | shasum -p | cut -d ' ' -f 1)"
+REPO_TMP="${TMP}/${CLONE_DIR}"
 
 if [ ! -d "${REPO_TMP}" ]; then
     ssh-keyscan -4 github.com 2>/dev/null > ~/.ssh/known_hosts

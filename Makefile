@@ -9,7 +9,7 @@ package: src/var/log/maitred
 	    -n "maitred" \
 	    --maintainer 'richard@cruxdigit.al' \
 	    --vendor 'cruxdigital' \
-	    -v 0.2.0 \
+	    -v 0.3.0 \
 	    -a all \
 	    -C ./src \
 	    --prefix / \

@@ -30,7 +30,7 @@ touch "${LOG_FILE}" || error "cannot write to log file at '${LOG_FILE}'"
 
 TMP="/tmp/maitred"
 mkdir -p $TMP
-CLONE_DIR="$(echo ${REPO} | shasum -p | cut -d ' ' -f 1)"
+CLONE_DIR="$(echo ${REPO} | sha1sum | cut -d ' ' -f 1)"
 REPO_TMP="${TMP}/${CLONE_DIR}"
 
 if [ ! -d "${REPO_TMP}" ]; then

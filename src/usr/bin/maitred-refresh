@@ -26,9 +26,7 @@ if [ ! -d "${USER_DIR}" ]; then
     error "cannot find user dir at '${USER_DIR}'"
 fi
 
-if [ ! -w "${LOG_FILE}" ]; then
-    error "cannot write to log file at '${LOG_FILE}'"
-fi
+touch "${LOG_FILE}" || error "cannot write to log file at '${LOG_FILE}'"
 
 TMP="/tmp/maitred"
 mkdir -p $TMP

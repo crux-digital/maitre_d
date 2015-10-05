@@ -1,0 +1,9 @@
+
+[Unit]
+Description=Maitred - maintain SSH authorized key files
+
+[Service]
+ExecStart=/usr/bin/maitred /etc/maitred.conf
+
+[Install]
+WantedBy=multi-user.target
